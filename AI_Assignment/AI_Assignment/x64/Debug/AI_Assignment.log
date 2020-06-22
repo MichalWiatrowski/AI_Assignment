@@ -1,0 +1,9 @@
+﻿  main.cpp
+c:\users\michal\desktop\omg\ai\ai_assignment\ai_assignment\statemachine.h(30): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\michal\desktop\omg\ai\ai_assignment\ai_assignment\game.h(58): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\michal\desktop\omg\ai\ai_assignment\ai_assignment\main.cpp(52): warning C4244: 'argument': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  AI_Assignment.vcxproj -> C:\Users\Michal\Desktop\OMG\AI\AI_Assignment\x64\Debug\AI_Assignment.exe

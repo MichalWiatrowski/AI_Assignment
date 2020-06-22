@@ -1,0 +1,49 @@
+[System]
+Name='final'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='distance'
+Range=[-1 1]
+NumMFs=3
+MF1='left':'gaussmf',[-0.65 -1]
+MF2='zero':'gaussmf',[0.1 0]
+MF3='right':'gaussmf',[-0.65 1]
+
+[Input2]
+Name='velocity'
+Range=[-1 1]
+NumMFs=3
+MF1='left':'gaussmf',[0.6 -1]
+MF2='zero':'gaussmf',[0.2 0]
+MF3='right':'gaussmf',[0.6 1]
+
+[Output1]
+Name='steering'
+Range=[-1 1]
+NumMFs=5
+MF1='hardLeft':'gaussmf',[0.35 -1]
+MF2='zero':'gaussmf',[0.1 0]
+MF3='hardRight':'gaussmf',[0.35 1]
+MF4='left':'gaussmf',[0.2 -0.4]
+MF5='right':'gaussmf',[0.2 0.4]
+
+[Rules]
+1 1, 3 (1) : 1
+1 2, 5 (1) : 1
+1 3, 2 (1) : 1
+2 1, 5 (1) : 1
+2 2, 2 (1) : 1
+2 3, 4 (1) : 1
+3 1, 2 (1) : 1
+3 2, 4 (1) : 1
+3 3, 1 (1) : 1
